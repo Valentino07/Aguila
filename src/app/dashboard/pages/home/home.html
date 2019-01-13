@@ -1,0 +1,141 @@
+<ion-header>
+  <ion-navbar>
+    <!-- profile card container -->
+    <div tappable id="profile-card" (click)="accountSettings()">
+      <i class="far fa-address-card"></i>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div id="view-container">
+    <div id="inner-container">
+      <!-- profile image -->
+      <div id="profile-img-container">
+        <img src="assets/profile/profile.jpg" alt="">
+      </div>
+
+      <!-- user point container -->
+      <div id="point-container">
+        <div id="points">
+            <img id="coins-icon" src="assets/icon/coin.png">
+          {{coins | number}} 
+          <img id="coins-icon" src="assets/icon/coin.png">
+        </div>
+        <div class="icon-desc">
+          3.75 gpa
+        </div>
+      </div>
+
+      <!-- user circle icons-->
+      <ion-grid class="top-spacing">
+        <ion-row>
+          <!-- column 1 -->
+          <ion-col col-4>
+            <div tappable class="icon-container" [ngStyle]="{'color': iconColors[0]}" (click)="viewStudyTool()">
+              <!-- circle fill -->
+              <svg viewBox="0 0 36 36" class="circular-chart-fill" *ngIf="calcDone">
+                <path class="circle-fill" [attr.stroke-dasharray]="circleLengthList[0]" [attr.stroke]="strokeColors[0]" d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831" />
+              </svg>
+              <!-- circle line -->
+              <svg viewBox="0 0 36 36" class="circular-chart-line">
+                <path class="circle-line" stroke-dasharray="100, 100" d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831" />
+              </svg>
+              <!-- circle icon -->
+              <i class="fas" [ngClass]="icon[0]"></i>
+            </div>
+            <div class="icon-desc">
+              <span>study hours</span>
+            </div>
+          </ion-col>
+          <!-- column 2 -->
+          <ion-col col-4>
+            <div tappable class="icon-container" [ngStyle]="{'color': iconColors[1]}" (click)="viewAttendanceTool()">
+              <!-- circle fill -->
+              <svg viewBox="0 0 36 36" class="circular-chart-fill" *ngIf="calcDone">
+                <path class="circle-fill" [attr.stroke-dasharray]="circleLengthList[1]" [attr.stroke]="strokeColors[1]" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+              </svg>
+              <!-- circle line -->
+              <svg viewBox="0 0 36 36" class="circular-chart-line">
+                <path class="circle-line" stroke-dasharray="100, 100" d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831" />
+              </svg>
+              <!-- circle icon -->
+              <i class="fas" [ngClass]="icon[1]"></i>
+            </div>
+            <div class="icon-desc">
+              <span>class attnd</span>
+            </div>
+          </ion-col>
+          <!-- column 3 -->
+          <ion-col col-4>
+            <div tappable class="icon-container" [ngStyle]="{'color': iconColors[2]}" (click)="viewOfficeHoursTool()">
+              <!-- circle fill -->
+              <svg viewBox="0 0 36 36" class="circular-chart-fill" *ngIf="calcDone">
+                <path class="circle-fill" [attr.stroke-dasharray]="circleLengthList[2]" [attr.stroke]="strokeColors[2]" d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831" />
+              </svg>
+              <!-- circle line -->
+              <svg viewBox="0 0 36 36" class="circular-chart-line">
+                <path class="circle-line" stroke-dasharray="100, 100" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831" />
+              </svg>
+              <!-- circle icon -->
+              <i class="fas" [ngClass]="icon[2]"></i>
+            </div>
+            <div class="icon-desc">
+              <span>office hours</span>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <!-- <div class="progress">Progress</div>
+        <div class="stacked-bar-graph">
+          <span style="width: 30%;" class="bar-1">Time Spent</span>
+          <span style="width: 25%;" class="bar-2">Study Hours</span>
+          <span style="width: 15%;" class="bar-3">Assignments</span>
+          <span style="width: 30%;" class="bar-4">Time Left</span>
+        </div> -->
+
+      <!-- boxes -->
+      <ion-grid class="top-spacing" id="boxes">
+        <ion-row>
+          <ion-col col-6 class="box" tappable (click)="viewClasses()">
+            <div class="box-icon-container">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="box-icon-desc">
+              <span>Classes</span>
+            </div>
+          </ion-col>
+          <ion-col col-6 class="box" tappable (click)="viewAssignments()">
+            <div class="box-icon-container">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <div class="box-icon-desc">
+              <span>Assignments</span>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+    </div>
+  </div>
+</ion-content>
+
+
+<!-- plus button -->
+<!-- <div id="plus-container">
+  <i class="fas fa-plus"></i>
+</div> -->

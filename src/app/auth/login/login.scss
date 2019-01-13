@@ -1,0 +1,67 @@
+page-login {
+    #title-container{
+        font-family: 'Roboto', sans-serif;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4.25rem;
+        font-weight: 500;
+    }
+
+    #form-container{
+        margin-top: 25px;
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    #form-container h1{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 400;
+    }
+    #logo{
+        height: 75px;
+        margin-right: 10px;
+    }
+
+    .input{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border: solid thin rgba(0, 0, 0, 0.1);
+        outline: none;
+        margin-bottom: 7px;
+        border-radius: 5px;
+        box-shadow: none;
+    }
+
+    #submit-btn{
+        font-family: 'Roboto', sans-serif;
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        font-size: 2rem;
+        border-radius: 5px;
+        background-color: #73beb4;
+        font-weight: 400;
+        color: white;
+    }
+
+    #notice{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        margin-top: 25px;
+        color: #2E8DD5;
+        display: block;
+        width:100%;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
